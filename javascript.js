@@ -30,3 +30,31 @@ function playerChoice() {
     }//to match the number the player chose with rock paper or scissors
 
 }
+
+
+function playRound() {
+    const computer = getComputerChoice();
+    const player = playerChoice();
+
+    console.log(`Yo chose ${player} and the computer chose ${computer}`)
+    // to log the computer and the player's choice
+
+
+    if(computer === player){
+        console.log("It's a tie")
+    }else if(computer == "rock" && player == "scissors"){
+        console.log("Computer wins")
+    }else if(computer == "paper" && player == "rock"){
+        console.log("Computer wins")
+    }else if(computer == "scissors" && player == "paper"){
+            console.log("Computer wins")
+    }else if(player == "rock" && computer == "scissors"){
+        console.log("player wins")
+    }else if(player == "paper" && computer == "rock"){
+        console.log("player wins")
+    }else if(player == "scissors" && computer == "paper"){
+            console.log("player wins")
+    }//see who wins at the game by evaluating the computer and the player choices
+}
+
+playRound();
