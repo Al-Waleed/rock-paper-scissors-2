@@ -39,22 +39,30 @@ function playRound() {
     console.log(`Yo chose ${player} and the computer chose ${computer}`)
     // to log the computer and the player's choice
 
+    let Winner;
+    let Tie;
 
     if(computer === player){
         console.log("It's a tie")
+        return Tie = "tie"
     }else if(computer == "rock" && player == "scissors"){
         console.log("Computer wins")
+        return Winner = "computer"
     }else if(computer == "paper" && player == "rock"){
         console.log("Computer wins")
+        return Winner = "computer"
     }else if(computer == "scissors" && player == "paper"){
-            console.log("Computer wins")
+        console.log("Computer wins")
+        return Winner = "computer"
     }else if(player == "rock" && computer == "scissors"){
         console.log("player wins")
+        return Winner = "player"
     }else if(player == "paper" && computer == "rock"){
         console.log("player wins")
+        return Winner = "player"
     }else if(player == "scissors" && computer == "paper"){
-            console.log("player wins")
+        console.log("player wins")
+        return Winner = "player"
     }//see who wins at the game by evaluating the computer and the player choices
 }
 
-playRound();
