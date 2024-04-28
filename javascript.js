@@ -14,27 +14,27 @@ function getComputerChoice() {
     }//to let the computer choose rock paper or scissors based on the random number 
 }
 
-function playerChoice() {
-    const userInput = prompt("Enter 1 for rock, 2 for paper and 3 for scissors");
-        //ask user for an input 
-    switch (+userInput) {// the "+" is to change the input from a string to an integer
-        case 1:
-            return "rock";
-            break;
-        case 2:
-            return "paper";
-            break;
-        case 3:
-            return "scissors";
-            break;
-    }//to match the number the player chose with rock paper or scissors
+// function playerChoice() {
+//     const userInput = prompt("Enter 1 for rock, 2 for paper and 3 for scissors");
+//         //ask user for an input 
+//     switch (+userInput) {// the "+" is to change the input from a string to an integer
+//         case 1:
+//             return "rock";
+//             break;
+//         case 2:
+//             return "paper";
+//             break;
+//         case 3:
+//             return "scissors";
+//             break;
+//     }//to match the number the player chose with rock paper or scissors
 
-}
+// }
 
 
 function playRound() {
     const computer = getComputerChoice();
-    const player = playerChoice();
+    const player = playerChoice;
 
     console.log(`Yo chose ${player} and the computer chose ${computer}`)
     // to log the computer and the player's choice
@@ -84,4 +84,18 @@ function playGame() {
 
     return `computer score ${computerCounter}, player score ${playerCounter}`;
     // returns scores
-}
+}   
+
+
+
+let playerChoice;
+
+const buttons = document.querySelectorAll("button");
+    
+    buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+            alert(button.id);
+            playerChoice = button.id;
+            playRound();
+        })
+    })
