@@ -12,6 +12,7 @@ body {
     gap: 120px;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     
 }
 
@@ -22,4 +23,11 @@ button {
     border-radius: 8px;
     padding: 6px;
     width: 110px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 60px;
 }
