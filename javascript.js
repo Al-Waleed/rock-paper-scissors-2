@@ -36,7 +36,7 @@ function playRound() {
     const computer = getComputerChoice();
     const player = playerChoice;
 
-    console.log(`Yo chose ${player} and the computer chose ${computer}`)
+    console.log(`You chose ${player} and the computer chose ${computer}`)
     // to log the computer and the player's choice
 
     let Winner;
@@ -89,8 +89,9 @@ function playGame() {
 
 
 let playerChoice;
+function getPlayerChoice(){
 
-const buttons = document.querySelectorAll("button");
+    const buttons = document.querySelectorAll("button");
     
     buttons.forEach((button) => {
         button.addEventListener("click", () => {
@@ -99,3 +100,4 @@ const buttons = document.querySelectorAll("button");
             playRound();
         })
     })
+}
