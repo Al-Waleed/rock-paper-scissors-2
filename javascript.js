@@ -66,25 +66,25 @@ function playRound() {
     }//see who wins at the game by evaluating the computer and the player choices
 }
 
-function playGame() {
-    let playerCounter = 0;
-    let computerCounter = 0;
-    // to keep count of how many wins
+// function playGame() {
+//     let playerCounter = 0;
+//     let computerCounter = 0;
+//     // to keep count of how many wins
 
-    for (let game = 0; game < 3; game++) {// play 3 rounds 
-        let round = playRound(); // start the round 
-        if (round == "tie" ){ //evaluate who wins
-            console.log("it's a tie")
-        }else if (round == "player"){
-            playerCounter++ // add 1 to the counter if player wins
-        }else if (round = "counter"){
-            computerCounter++ // add 1 to thr counter if computer wins
-        }
-    }
+//     for (let game = 0; game < 3; game++) {// play 3 rounds 
+//         let round = playRound(); // start the round 
+//         if (round == "tie" ){ //evaluate who wins
+//             console.log("it's a tie")
+//         }else if (round == "player"){
+//             playerCounter++ // add 1 to the counter if player wins
+//         }else if (round = "counter"){
+//             computerCounter++ // add 1 to thr counter if computer wins
+//         }
+//     }
 
-    return `computer score ${computerCounter}, player score ${playerCounter}`;
-    // returns scores
-}   
+//     return `computer score ${computerCounter}, player score ${playerCounter}`;
+//     // returns scores
+// }   
 
 
 
@@ -97,7 +97,28 @@ function getPlayerChoice(){
         button.addEventListener("click", () => {
             alert(button.id);
             playerChoice = button.id;
-            playRound();
+             round = playRound();
+            evaluate()
         })
     })
+}
+getPlayerChoice()
+
+let round ;
+
+let playerCounter = 0;
+let computerCounter = 0;
+function evaluate(){
+
+        if (round == "tie" ){ //evaluate who wins
+            console.log("it's a tie")
+        }else if (round == "player"){
+            playerCounter++ // add 1 to the counter if player wins
+        }else if (round = "counter"){
+            computerCounter++ // add 1 to thr counter if computer wins
+        }
+
+    console.log(`computer score ${computerCounter}, player score ${playerCounter}`);
+
+
 }
