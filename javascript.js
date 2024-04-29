@@ -91,7 +91,7 @@ function playRound() {
 let playerChoice;
 function getPlayerChoice(){
 
-    const buttons = document.querySelectorAll("button");
+    const buttons = document.querySelectorAll(".pick");
     
     buttons.forEach((button) => {
         button.addEventListener("click", () => {
@@ -122,11 +122,16 @@ function evaluate(){
 
         if(playerCounter == 5){
             alert("Player Wins.");
+            location.reload()
         }else if(computerCounter == 5){
             alert("Computer Wins.");
+            location.reload()
         }
 
 
 }
 
 const score = document.querySelector("#score");
+const restart = document.querySelector("#restart");
+
+restart.addEventListener("click", () => location.reload());
