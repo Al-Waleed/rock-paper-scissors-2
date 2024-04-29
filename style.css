@@ -16,13 +16,14 @@ body {
     
 }
 
-button {
+div, button {
     background-color: #24527a;
     color: #a7bcb9;
     border: 0;
     border-radius: 8px;
     padding: 6px;
     width: 110px;
+    text-align: center;
 }
 
 ul {

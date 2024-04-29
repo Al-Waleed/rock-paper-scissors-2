@@ -118,7 +118,9 @@ function evaluate(){
             computerCounter++ // add 1 to thr counter if computer wins
         }
 
-    console.log(`computer score ${computerCounter}, player score ${playerCounter}`);
+        score.innerHTML =(`computer: ${computerCounter} player: ${playerCounter}`);
 
 
 }
+
+const score = document.querySelector("#score");
