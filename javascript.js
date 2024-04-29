@@ -43,25 +43,25 @@ function playRound() {
     let Tie;
 
     if(computer === player){
-        console.log("It's a tie")
+        alert("It's a tie, try again")
         return Tie = "tie"
     }else if(computer == "rock" && player == "scissors"){
-        console.log("Computer wins")
+        // console.log("Computer wins")
         return Winner = "computer"
     }else if(computer == "paper" && player == "rock"){
-        console.log("Computer wins")
+        // console.log("Computer wins")
         return Winner = "computer"
     }else if(computer == "scissors" && player == "paper"){
-        console.log("Computer wins")
+        // console.log("Computer wins")
         return Winner = "computer"
     }else if(player == "rock" && computer == "scissors"){
-        console.log("player wins")
+        // console.log("player wins")
         return Winner = "player"
     }else if(player == "paper" && computer == "rock"){
-        console.log("player wins")
+        // console.log("player wins")
         return Winner = "player"
     }else if(player == "scissors" && computer == "paper"){
-        console.log("player wins")
+        // console.log("player wins")
         return Winner = "player"
     }//see who wins at the game by evaluating the computer and the player choices
 }
@@ -95,7 +95,7 @@ function getPlayerChoice(){
     
     buttons.forEach((button) => {
         button.addEventListener("click", () => {
-            alert(button.id);
+            // alert(button.id);
             playerChoice = button.id;
              round = playRound();
             evaluate()
@@ -119,6 +119,12 @@ function evaluate(){
         }
 
         score.innerHTML =(`computer: ${computerCounter} player: ${playerCounter}`);
+
+        if(playerCounter == 5){
+            alert("Player Wins.");
+        }else if(computerCounter == 5){
+            alert("Computer Wins.");
+        }
 
 
 }
